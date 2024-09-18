@@ -17,12 +17,12 @@ $books = [
 
 
 function showAllBooks($books) {
-    foreach ($books as $id => $book) {
-        // need to display each book here
+    foreach ($books as $key => $book) {
+        displayBook ($key, $books[$key]);
     }
 }
 
-function showBook() {
+function showBook($books) {
     $id = readline("Enter book id: ");
     displayBook($id, $books[$id]);
 }
